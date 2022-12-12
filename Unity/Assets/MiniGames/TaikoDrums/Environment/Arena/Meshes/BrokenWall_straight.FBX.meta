@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 6d73893a6cf272144a2e7bb696e572a2
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Base
+    100002: //RootNode
+    100004: Ladrillos
+    100006: Roca1
+    100008: Roca2
+    100010: Roca3
+    100012: Roca4
+    100014: Roca5
+    100016: Rocas
+    100018: Techo
+    100020: Top
+    100022: Zocalo
+    400000: Base
+    400002: //RootNode
+    400004: Ladrillos
+    400006: Roca1
+    400008: Roca2
+    400010: Roca3
+    400012: Roca4
+    400014: Roca5
+    400016: Rocas
+    400018: Techo
+    400020: Top
+    400022: Zocalo
+    2100000: m_Pared
+    2100002: m_ladrillos
+    2100004: m_base
+    2100006: m_roturas
+    2100008: m_zocalo
+    2100010: m_techo
+    2100012: m_top
+    2300000: Base
+    2300002: //RootNode
+    2300004: Ladrillos
+    2300006: Roca1
+    2300008: Roca2
+    2300010: Roca3
+    2300012: Roca4
+    2300014: Roca5
+    2300016: Techo
+    2300018: Top
+    2300020: Zocalo
+    3300000: Base
+    3300002: //RootNode
+    3300004: Ladrillos
+    3300006: Roca1
+    3300008: Roca2
+    3300010: Roca3
+    3300012: Roca4
+    3300014: Roca5
+    3300016: Techo
+    3300018: Top
+    3300020: Zocalo
+    4300000: Pared
+    4300002: Base
+    4300004: Zocalo
+    4300006: Techo
+    4300008: Ladrillos
+    4300010: Top
+    4300012: Roca3
+    4300014: Roca1
+    4300016: Roca4
+    4300018: Roca5
+    4300020: Roca2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_Pared
+    second: {fileID: 2100000, guid: c838a56291e97bc4bbbd09038bc0d9b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_base
+    second: {fileID: 2100000, guid: 02f20c81b22542844a5d662077df2216, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_ladrillos
+    second: {fileID: 2100000, guid: b13fe1e41686a8647897b14b920727c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_roturas
+    second: {fileID: 2100000, guid: 1ae7572e5bb176d4bafbb8588731e85a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_techo
+    second: {fileID: 2100000, guid: 6fc53a3ff174064499cb29566471a6c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_top
+    second: {fileID: 2100000, guid: 4581d7881ec8d2b429eb85e15fac29db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_zocalo
+    second: {fileID: 2100000, guid: b8361fa1f8e1d6f46b734cf6dfb5765e, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bajos2
+    second: {fileID: 2800000, guid: 23e3950ce0e44bb479201990f5383a32, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bajos3
+    second: {fileID: 2800000, guid: 110acc426b3014948b5387a609715715, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ladrillo1
+    second: {fileID: 2800000, guid: 82f7846dd0e16264183657d7687a4970, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ladrillo2
+    second: {fileID: 2800000, guid: 3089457e93b84c34b8d307675937e148, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pared
+    second: {fileID: 2800000, guid: e58374f12dc146740a8f72c248b36014, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roca1
+    second: {fileID: 2800000, guid: 3b7a410e9cd23fc488bd84bf77737006, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Top
+    second: {fileID: 2800000, guid: ba85c9772baf04e4b87cc986c7f178e0, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
