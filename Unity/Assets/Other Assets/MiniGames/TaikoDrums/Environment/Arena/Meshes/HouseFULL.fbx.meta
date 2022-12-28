@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 98f06aa552d569445a610121576bc210
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Columnas
+    100002: ColumnasBase
+    100004: Decals
+    100006: Entrada
+    100008: Escaleras
+    100010: Floor_Camino
+    100012: Floor_piedritas
+    100014: Floor_plaza
+    100016: Floor_standard
+    100018: //RootNode
+    100020: Jardineras
+    100022: Portales
+    100024: Stairs
+    100026: Tejado
+    100028: Tejado_under
+    100030: Tierra
+    100032: Ventanas
+    100034: WallFrontalTejados
+    400000: Columnas
+    400002: ColumnasBase
+    400004: Decals
+    400006: Entrada
+    400008: Escaleras
+    400010: Floor_Camino
+    400012: Floor_piedritas
+    400014: Floor_plaza
+    400016: Floor_standard
+    400018: //RootNode
+    400020: Jardineras
+    400022: Portales
+    400024: Stairs
+    400026: Tejado
+    400028: Tejado_under
+    400030: Tierra
+    400032: Ventanas
+    400034: WallFrontalTejados
+    2100000: Tex_2040_0.dds
+    2100002: Tex_2019_0.dds
+    2100004: Tex_1775_0.dds
+    2100006: Tex_1982_0.dds
+    2100008: Tex_1755_0.dds
+    2100010: Tex_1795_0.dds
+    2100012: Tex_1671_0.dds
+    2100014: Tex_2245_0.dds
+    2100016: Tex_2128_0.dds
+    2100018: Tex_2112_0.dds
+    2100020: Tex_1927_0.dds
+    2100022: Tex_17453_0.dds
+    2100024: Tex_1738_0.dds
+    2100026: Tex_1638_0.dds
+    2300000: Columnas
+    2300002: ColumnasBase
+    2300004: Decals
+    2300006: Entrada
+    2300008: Floor_Camino
+    2300010: Floor_piedritas
+    2300012: Floor_plaza
+    2300014: Floor_standard
+    2300016: Jardineras
+    2300018: Portales
+    2300020: Stairs
+    2300022: Tejado
+    2300024: Tejado_under
+    2300026: Tierra
+    2300028: Ventanas
+    2300030: WallFrontalTejados
+    3300000: Columnas
+    3300002: ColumnasBase
+    3300004: Decals
+    3300006: Entrada
+    3300008: Floor_Camino
+    3300010: Floor_piedritas
+    3300012: Floor_plaza
+    3300014: Floor_standard
+    3300016: Jardineras
+    3300018: Portales
+    3300020: Stairs
+    3300022: Tejado
+    3300024: Tejado_under
+    3300026: Tierra
+    3300028: Ventanas
+    3300030: WallFrontalTejados
+    4300000: Floor_piedritas
+    4300002: Floor_Camino
+    4300004: Floor_standard
+    4300006: Floor_plaza
+    4300008: Entrada
+    4300010: Jardineras
+    4300012: Stairs
+    4300014: Ventanas
+    4300016: ColumnasBase
+    4300018: Tejado
+    4300020: Tejado_under
+    4300022: WallFrontalTejados
+    4300024: Decals
+    4300026: Tierra
+    4300028: Portales
+    4300030: Columnas
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_1638_0.dds
+    second: {fileID: 2100000, guid: f0e48b10e6b9f134e914a14ffbb30e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_1671_0.dds
+    second: {fileID: 2100000, guid: 8560de56040bd904f9e39b612c1319cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_1738_0.dds
+    second: {fileID: 2100000, guid: c56c090c69f566648873c6e889ef6ed8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_17453_0.dds
+    second: {fileID: 2100000, guid: 54a7a1a8677adcd43bce3c3a37c20532, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_1755_0.dds
+    second: {fileID: 2100000, guid: 6c8751401b3a6c94b97614401f99abcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_1775_0.dds
+    second: {fileID: 2100000, guid: 42d994fe492a76e4d8db68156a005f6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_1795_0.dds
+    second: {fileID: 2100000, guid: 460085e78ae16134e81356534b094ab9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_1927_0.dds
+    second: {fileID: 2100000, guid: 15aef9282ac237c438230615d91c7737, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_1982_0.dds
+    second: {fileID: 2100000, guid: 32a65a678dd8a284abd481396bb4a498, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_2019_0.dds
+    second: {fileID: 2100000, guid: 3d4eee651c417d14590fdc57d6addd3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_2040_0.dds
+    second: {fileID: 2100000, guid: 414b69a4964cf7a4da3ba6052682537d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_2112_0.dds
+    second: {fileID: 2100000, guid: f5eea9497d3138243bdd0be734ea92b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_2128_0.dds
+    second: {fileID: 2100000, guid: 902938875711bcd4d8f33ae377aac246, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_2245_0.dds
+    second: {fileID: 2100000, guid: 5830e0af29d09a04eb2f94b29615a9c6, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
