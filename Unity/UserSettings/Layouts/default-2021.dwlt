@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 362
     height: 614
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -566,9 +566,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c6510000
+      m_SelectedIDs: c8510000
       m_LastClickedID: 0
-      m_ExpandedIDs: 90aaffffe4e5ffffa2e7ffff08fbffff60580000
+      m_ExpandedIDs: 66f5ffff08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -817,9 +817,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.0447478, y: 3.7316604, z: 13.744533}
+    m_Target: {x: -6.164074, y: 6.328494, z: -1.7187691}
     speed: 2
-    m_Value: {x: 2.0447478, y: 3.7316604, z: 13.744533}
+    m_Value: {x: -6.164074, y: 6.328494, z: -1.7187691}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -866,13 +866,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0841403, y: -0.03974836, z: 0.003360239, w: -0.99563134}
+    m_Target: {x: -0.1163635, y: -0.10645652, z: 0.012544824, w: -0.98738253}
     speed: 2
-    m_Value: {x: -0.0841423, y: -0.039749302, z: 0.0033603187, w: -0.99565494}
+    m_Value: {x: -0.11634717, y: -0.1079399, z: 0.0127196405, w: -0.9872439}
   m_Size:
-    m_Target: 5.823903
+    m_Target: 11.518369
     speed: 2
-    m_Value: 5.823903
+    m_Value: 11.518369
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -958,7 +958,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
