@@ -31,19 +31,25 @@ public class TitleFade : MonoBehaviour
     {
         if (timeUntilFadeIn > 0)
         {
-            timeUntilFadeIn--;
-
+            timeUntilFadeIn -= Time.deltaTime;
         }
         else
         {
-            if(alpha.a < 1.0f)
+            if (alpha.a < 1.0f)
             {
-                alpha.a += 0.0005f * fadeSpeed;
+                alpha.a += 0.5f * fadeSpeed * Time.deltaTime;
                 text.color = alpha;
             }
         }
 
-        if (Input.anyKey)
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+
+            // Esto hay que quitarlo si se hace una build. En el Editor cierra el juego
+            //UnityEditor.EditorApplication.isPlaying = false;
+        }
+        else if (Input.anyKey)
         {
             SceneManager.LoadScene("BattleScene", LoadSceneMode.Single);
         }
