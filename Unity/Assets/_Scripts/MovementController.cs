@@ -10,11 +10,7 @@ public class MovementController : MonoBehaviour
 
     [SerializeField]
     float SafetyDistance=0.5f;
-    // Start is called before the first frame update
    
-
-    
-
     #region AnimationParamNames
     const string SPEED = "Speed";
     const string ATTACK_HIGH_QUICK = "AttackHighQuick";
@@ -40,20 +36,16 @@ public class MovementController : MonoBehaviour
         _otherPlayer = other;
     }
 
-    
     public void TryMove(float speed)
     {
-        
-
         if (CanMove(speed))
-        {       
+        {
             _animator.SetFloat(SPEED, _id == 1 ? -speed : speed);
         }
-            
         else
+        {
             _animator.SetFloat(SPEED, 0);
-
-
+        }
     }
 
     public void LateUpdate()
@@ -99,6 +91,4 @@ public class MovementController : MonoBehaviour
 
         return true;
     }
-
-  
 }

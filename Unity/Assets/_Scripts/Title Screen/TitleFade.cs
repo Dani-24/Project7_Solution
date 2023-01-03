@@ -43,7 +43,7 @@ public class TitleFade : MonoBehaviour
             }
         }
 
-        if (Keyboard.current.anyKey.wasPressedThisFrame)
+        if (Input.anyKey)
         {
             SceneManager.LoadScene("BattleScene", LoadSceneMode.Single);
         }

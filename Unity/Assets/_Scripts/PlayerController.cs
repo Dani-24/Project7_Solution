@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     GameObject ImpactPrefab;
  
-    // Start is called before the first frame update
     private bool _isAttacking;
     private bool _isBlocking;
 
@@ -19,9 +18,6 @@ public class PlayerController : MonoBehaviour
     private bool CanBlock => !_isAttacking && !_isBlocking;
 
     public bool Dead => _dead;
-
-
-
 
     #region AnimationParamNames
     const string SPEED = "Speed";
@@ -33,11 +29,8 @@ public class PlayerController : MonoBehaviour
     const string BLOCK_HIGH = "BlockHigh";
     const string BLOCK_LOW = "BlockLow";
 
-
     const string DIE = "Die";
     const string WIN = "Win";
-
-    
 
     #endregion
 
@@ -64,8 +57,6 @@ public class PlayerController : MonoBehaviour
         _isAttacking = value;
         UpOrDown = upDown;
     }
-
-   
 
     internal void SetBlocking(bool value, UpDown upDown)
     {
@@ -106,7 +97,6 @@ public class PlayerController : MonoBehaviour
             _animator.SetTrigger(BLOCK_LOW);
     }
 
-
     public void OnHit(Transform hit)
     {
         var hitBy = hit.root.GetComponent<PlayerController>();
@@ -118,11 +108,7 @@ public class PlayerController : MonoBehaviour
                 hitBy.Win();
                 Instantiate(ImpactPrefab, hit.position, Quaternion.identity);
             }
-            
         }
-        
-
-        
     }
 
     private void Die()
@@ -131,8 +117,6 @@ public class PlayerController : MonoBehaviour
 
       //  GetComponent<AudioSource>().Play();
         StartCoroutine(DieLater());
-
-
     }
 
     IEnumerator DieLater()

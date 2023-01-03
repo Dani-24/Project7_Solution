@@ -26,8 +26,6 @@ public class PlayerStart : MonoBehaviour
         OnPlayerAddedAnswer -= ListenToAnswer;
     }
 
-   
-
     private void ListenToAdded(PlayerStart other)
     {
         if (other != this)
@@ -46,7 +44,6 @@ public class PlayerStart : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         transform.position = StartPositions[nPLayers];
@@ -55,7 +52,6 @@ public class PlayerStart : MonoBehaviour
         OnPlayerAdded?.Invoke(this);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
