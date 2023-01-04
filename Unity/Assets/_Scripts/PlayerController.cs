@@ -1,143 +1,100 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+    private CharacterController controller;
+    private Vector3 playerVelocity;
+    private bool groundedPlayer;
+
+    public bool alive = true;
+
     [SerializeField]
-    GameObject ImpactPrefab;
- 
-    private bool _isAttacking;
-    private bool _isBlocking;
+    private float playerSpeed = 2.0f;
+    [SerializeField]
+    private float jumpHeight = 1.0f;
+    [SerializeField]
+    private float gravityValue = -9.81f;
 
-    private UpDown UpOrDown;
+    [SerializeField]
+    private float movementInput = 0.0f;
+    [SerializeField]
+    private bool jumped = false;
+    [SerializeField]
+    private bool blocked = false;
+    [SerializeField]
+    private bool quickAttacked = false;
+    [SerializeField]
+    private bool slowAttacked = false;
+    [SerializeField]
+    private bool lowQuickAttacked = false;
+    [SerializeField]
+    private bool lowSlowAttacked = false;
 
-    private bool CanAttack => !_isAttacking && !_isBlocking;
-    private bool CanBlock => !_isAttacking && !_isBlocking;
-
-    public bool Dead => _dead;
-
-    #region AnimationParamNames
-    const string SPEED = "Speed";
-    const string ATTACK_HIGH_QUICK = "AttackHighQuick";
-    const string ATTACK_HIGH_SLOW = "AttackHighSlow";
-    const string ATTACK_LOW_QUICK = "AttackLowQuick";
-    const string ATTACK_LOW_SLOW = "AttackLowSlow";
-
-    const string BLOCK_HIGH = "BlockHigh";
-    const string BLOCK_LOW = "BlockLow";
-
-    const string DIE = "Die";
-    const string WIN = "Win";
-
-    #endregion
-
-    private Animator _animator;
-    private Transform _otherPlayer;
-
-    static int _playercount;
-    int _id;
-    private bool _dead;
-
-    private void Awake()
+    private void Start()
     {
-        _animator = GetComponent<Animator>();
-        _id = _playercount++;
+        controller = gameObject.GetComponent<CharacterController>();
     }
 
-    public void SetOtherPlayer(Transform other)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        _otherPlayer = other;
+        movementInput = context.ReadValue<Vector2>().x;
     }
 
-    internal void SetAtacking(bool value, UpDown upDown)
+    public void OnJump(InputAction.CallbackContext context)
     {
-        _isAttacking = value;
-        UpOrDown = upDown;
+        jumped = context.action.triggered;
     }
 
-    internal void SetBlocking(bool value, UpDown upDown)
+    public void OnBlock(InputAction.CallbackContext context)
     {
-        _isBlocking = value;
-        UpOrDown = upDown;
+        blocked = context.action.triggered;
     }
 
-    public void TryHighQuickAttack()
+    public void OnQuickAttack(InputAction.CallbackContext context)
     {
-        if (CanAttack)
-            _animator.SetTrigger(ATTACK_HIGH_QUICK);
-    }
-    public void TryHighSlowAttack()
-    {
-        if (CanAttack)
-            _animator.SetTrigger(ATTACK_HIGH_SLOW);
-    }
-    public void TryLowQuickAttack()
-    {
-        if (CanAttack)
-            _animator.SetTrigger(ATTACK_LOW_QUICK);
-    }
-    public void TryLowSlowAttack()
-    {
-        if (CanAttack)
-            _animator.SetTrigger(ATTACK_LOW_SLOW);
+        quickAttacked = context.action.triggered;
     }
 
-    internal void TryHighBlock()
+    public void OnSlowAttack(InputAction.CallbackContext context)
     {
-        if (CanBlock)
-            _animator.SetTrigger(BLOCK_HIGH);
+        slowAttacked = context.action.triggered;
     }
 
-    internal void TryLowBlock()
+    public void OnLowQuickAttack(InputAction.CallbackContext context)
     {
-        if (CanBlock)
-            _animator.SetTrigger(BLOCK_LOW);
+        lowQuickAttacked = context.action.triggered;
     }
 
-    public void OnHit(Transform hit)
+    public void OnLowSlowAttack(InputAction.CallbackContext context)
     {
-        var hitBy = hit.root.GetComponent<PlayerController>();
-        if (hitBy.transform == _otherPlayer && hitBy._isAttacking)
+        lowSlowAttacked = context.action.triggered;
+    }
+
+    void Update()
+    {
+        groundedPlayer = controller.isGrounded;
+        if (groundedPlayer && playerVelocity.y < 0)
         {
-            if (!_isBlocking || hitBy.UpOrDown!=this.UpOrDown || hitBy.Dead)
-            {
-                Die();
-                hitBy.Win();
-                Instantiate(ImpactPrefab, hit.position, Quaternion.identity);
-            }
+            playerVelocity.y = 0f;
         }
+
+        Vector3 move = new Vector3(movementInput, 0, 0);
+        controller.Move(move * Time.deltaTime * playerSpeed);
+
+        if (move != Vector3.zero)
+        {
+            gameObject.transform.forward = move;
+        }
+
+        // Changes the height position of the player..
+        if (jumped && groundedPlayer)
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }
+
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
-
-    private void Die()
-    {
-        _animator.SetTrigger(DIE);
-
-      //  GetComponent<AudioSource>().Play();
-        StartCoroutine(DieLater());
-    }
-
-    IEnumerator DieLater()
-    {
-        yield return new WaitForSeconds(0.1f);
-        _dead = true;
-        yield return new WaitForSeconds(5);
-        PlayerStart.nPLayers = 0;
-        _playercount = 0;
-        MovementController._playercount = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void Win()
-    {
-        _animator.SetTrigger(WIN);
-    }
-}
-
-public enum UpDown
-{
-    Up,
-    Down
 }
