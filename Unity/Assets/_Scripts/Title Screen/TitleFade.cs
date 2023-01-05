@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.TextCore.Text;
 
 public class TitleFade : MonoBehaviour
 {
@@ -18,40 +19,74 @@ public class TitleFade : MonoBehaviour
 
     public float fadeSpeed = 1.0f;
 
+
+    public TextMeshProUGUI titleText;
+
+    private bool onTitle = true;
+
+    public GameObject selectCharacterGameObject;
+
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
 
         alpha = new Color(255,255,255,0);
         text.color = alpha;
-        
     }
 
     void Update()
     {
-        if (timeUntilFadeIn > 0)
+        if (onTitle)
         {
-            timeUntilFadeIn -= Time.deltaTime;
+            if (timeUntilFadeIn > 0)
+            {
+                timeUntilFadeIn -= Time.deltaTime;
+            }
+            else
+            {
+                if (alpha.a < 1.0f)
+                {
+                    alpha.a += 0.5f * fadeSpeed * Time.deltaTime;
+                    text.color = alpha;
+                }
+            }
         }
         else
         {
-            if (alpha.a < 1.0f)
-            {
-                alpha.a += 0.5f * fadeSpeed * Time.deltaTime;
-                text.color = alpha;
-            }
+            alpha.a -= 0.5f * fadeSpeed * Time.deltaTime;
+            text.color = alpha;
+            titleText.color = alpha;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
-
-            // Esto hay que quitarlo si se hace una build. En el Editor cierra el juego
-            //UnityEditor.EditorApplication.isPlaying = false;
+            if (onTitle)
+            {
+                Application.Quit();
+            }
+            else
+            {
+                ChangeScene("TitleScene");
+            }
         }
-        else if (Input.anyKey)
+        else if (Input.anyKey && onTitle == true)
         {
-            SceneManager.LoadScene("BattleScene", LoadSceneMode.Single);
+            onTitle = false;
+            SelectCharacters();
         }
+
     }
+
+    private void SelectCharacters()
+    {
+        SelectCharacter.start = true;
+    }
+
+    private void ChangeScene(string scene)
+    {
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+
+        //ChangeScene("BattleScene");
+    }
+
 }
