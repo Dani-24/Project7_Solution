@@ -31,6 +31,9 @@ public class SelectCharacter : MonoBehaviour
 
     public void OnStart()
     {
+        PlayerManager.playerType1 = null;
+        PlayerManager.playerType2 = null;
+
         go1 = Instantiate(character1);
         go1.transform.parent = transform;
 

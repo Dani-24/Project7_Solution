@@ -427,6 +427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8247129278097414052}
+  - component: {fileID: 4597839429072163524}
   m_Layer: 0
   m_Name: Prefab_Character_Dani_Toledo
   m_TagString: Untagged
@@ -454,3 +455,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4597839429072163524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734837917430058270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cdb7210b2656d4888d543f2bcd850b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterPhoto: {fileID: 21300000, guid: a76d88260ed84474e8df719650a3da64, type: 3}
+  characterName: Buff SUS
+  HP: 100
+  attackDMG: 10
+  iddle: {fileID: 0}
+  walkForward: {fileID: 0}
+  walkBackwards: {fileID: 0}
+  blockHighAttack: {fileID: 0}
+  blockLowAttack: {fileID: 0}
+  attackQuick: {fileID: 0}
+  attackSlow: {fileID: 0}
+  lowQuickAttack: {fileID: 0}
+  lowSlowAttack: {fileID: 0}
+  die: {fileID: 0}
+  win: {fileID: 0}
