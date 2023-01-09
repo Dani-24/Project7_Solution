@@ -1,0 +1,11 @@
+idle-> 2-24
+Walk front-> 25-33
+Walk backwards ->
+Block high attack (dodge) ->
+Block Low attack (jump in place) ->
+Attack quick (short range) ->
+Attack slow (long range) ->
+Low quick attack (short range) ->
+Low slow attack (long range) ->
+Die->
+Win->
