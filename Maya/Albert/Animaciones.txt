@@ -1,0 +1,10 @@
+idle 0-40
+golpe rapido  50-80
+golpe fuerte 90-130
+golpe bajo rapido 140 -170
+golpe bajo fuerte 180 -220
+blokeo 230 - 250
+blokeo bajo 265 - 295
+caminar 300 -329
+muelto 340- 364
+victoria 370 420
