@@ -1,7 +1,7 @@
-Idle - 1 - 39
-Walk front - 1 - 99
-Walk backwards - 1 - 99
-Block high attack (dodge) - 1 - 39
+Idle - 1 - 239 (240)
+Walk front - 1 - 59 (60)
+Walk backwards - 1 - 74 (75)
+Block high attack (dodge) - 1 - 
 Block Low attack (jump in place) - 1 - 
 Attack quick (short range) - 1 - 
 Attack slow (long range) - 1 - 
