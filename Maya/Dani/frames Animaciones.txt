@@ -1,11 +1,11 @@
-Idle - 1 - 239 (240)
-Walk front - 1 - 59 (60)
-Walk backwards - 1 - 74 (75)
-Block high attack (dodge) - 1 - 
-Block Low attack (jump in place) - 1 - 
-Attack quick (short range) - 1 - 
-Attack slow (long range) - 1 - 
-Low quick attack (short range) - 1 -
-Low slow attack (long range) - 1 -
-Die - 1 -
-Win - 1 -
+Idle - 1 - 239 (240) Loop
+Walk front - 2 (1) - 59 (60) Loop
+Walk backwards - 1 - 74 (75) Loop
+Block high attack (dodge) - 1 - 60 Loopn't
+Block Low attack (jump in place) - 1 - 60 Loop
+Attack quick (short range) - 1 - 30 Loop
+Attack slow (long range) - 1 - 60 Loop
+Low quick attack (short range) - 1 - 30 Loop
+Low slow attack (long range) - 1 - 60 Loop
+Die - 1 - 130 Loopn't
+Win - 1 - 200 Loopn't
