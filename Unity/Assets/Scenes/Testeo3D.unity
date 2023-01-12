@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -219,7 +219,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183617685
 GameObject:
@@ -397,7 +397,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!4 &156827869045602188
 Transform:
@@ -579,6 +579,63 @@ Transform:
   m_Father: {fileID: 8582071598313497766}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1586897602218428616
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.5717
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.21145
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265357062759492296, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928845931633963122, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+      propertyPath: m_Name
+      value: Thor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
 --- !u!1 &2240758449284959337
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +713,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3915966007205837160, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3915966007205837160, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -772,17 +829,6 @@ MonoBehaviour:
   characterName: Buff SUS
   HP: 100
   attackDMG: 10
-  iddle: {fileID: 0}
-  walkForward: {fileID: 0}
-  walkBackwards: {fileID: 0}
-  blockHighAttack: {fileID: 0}
-  blockLowAttack: {fileID: 0}
-  attackQuick: {fileID: 0}
-  attackSlow: {fileID: 0}
-  lowQuickAttack: {fileID: 0}
-  lowSlowAttack: {fileID: 0}
-  die: {fileID: 0}
-  win: {fileID: 0}
 --- !u!1 &4828556259153525413
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,7 +965,7 @@ Transform:
   - {fileID: 156827869045602188}
   - {fileID: 430620476988810791}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 89.224, z: 0}
 --- !u!1 &8958350197319122460
 GameObject:
