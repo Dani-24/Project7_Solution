@@ -24,6 +24,11 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private Vector3 velocity = Vector3.zero;
 
+    float dist;
+
+    [SerializeField]
+    private float distanciaAlaQueSeDanDeHostias = 5.0f;
+
     private void Start()
     {
         posX = transform.position.x;
@@ -48,7 +53,7 @@ public class CameraController : MonoBehaviour
             {
                 posX = (players[0].transform.position.x + players[1].transform.position.x) / 2;
 
-                float dist =  Vector3.Distance(players[0].transform.position, players[1].transform.position);
+                dist = Vector3.Distance(players[0].transform.position, players[1].transform.position);
 
                 //Debug.Log("Distance between the 2 Players: " + dist);
 
@@ -74,5 +79,79 @@ public class CameraController : MonoBehaviour
             Vector3 targetPos = new Vector3(posX, transform.position.y, posZ);
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
         }
+
+        // COMPROBACIONES DE LOS ATAQUES
+        if (dist < distanciaAlaQueSeDanDeHostias)
+        {
+            // Player 1 Quick Attack
+            if (players[0].GetComponentInParent<PlayerController>().quickAttacked == true && players[1].GetComponentInParent<PlayerController>().blocked == false)
+            {
+                players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG;
+            }
+
+            // Player 2 Quick Attack
+            if (players[1].GetComponentInParent<PlayerController>().quickAttacked == true && players[0].GetComponentInParent<PlayerController>().blocked == false)
+            {
+                players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG;
+            }
+
+            // Player 1 Slow Attack
+            if (players[0].GetComponentInParent<PlayerController>().slowAttacked == true && players[1].GetComponentInParent<PlayerController>().blocked == false)
+            {
+                players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
+            }
+
+            // Player 2 Slow Attack
+            if (players[1].GetComponentInParent<PlayerController>().slowAttacked == true && players[0].GetComponentInParent<PlayerController>().blocked == false)
+            {
+                players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
+            }
+
+            // LOW ANIMATIONS
+
+            // Player 1 Quick Attack
+            if (players[0].GetComponentInParent<PlayerController>().lowQuickAttacked == true && players[1].GetComponentInParent<PlayerController>().jumped == false)
+            {
+                players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG;
+            }
+
+            // Player 2 Quick Attack
+            if (players[1].GetComponentInParent<PlayerController>().lowQuickAttacked == true && players[0].GetComponentInParent<PlayerController>().jumped == false)
+            {
+                players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG;
+            }
+
+            // Player 1 Slow Attack
+            if (players[0].GetComponentInParent<PlayerController>().lowSlowAttacked == true && players[1].GetComponentInParent<PlayerController>().jumped == false)
+            {
+                players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
+            }
+
+            // Player 2 Slow Attack
+            if (players[1].GetComponentInParent<PlayerController>().lowSlowAttacked == true && players[0].GetComponentInParent<PlayerController>().jumped == false)
+            {
+                players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
+            }
+        }
+
+        // Si la vida baja P1
+        if (players[0].GetComponent<PrefabPropierties>().HP <= 0)
+        {
+            players[0].GetComponentInParent<PlayerController>().die = true;
+            players[1].GetComponentInParent<PlayerController>().win = true;
+
+            players[0].GetComponentInParent<PlayerController>().playing = false;
+            players[1].GetComponentInParent<PlayerController>().playing = false;
+        }
+        // P2
+        if (players[1].GetComponent<PrefabPropierties>().HP <= 0)
+        {
+            players[1].GetComponentInParent<PlayerController>().die = true;
+            players[0].GetComponentInParent<PlayerController>().win = true;
+
+            players[0].GetComponentInParent<PlayerController>().playing = false;
+            players[1].GetComponentInParent<PlayerController>().playing = false;
+        }
+
     }
 }

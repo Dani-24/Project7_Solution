@@ -1359,7 +1359,7 @@ MonoBehaviour:
   characterPhoto: {fileID: 21300000, guid: 7d62577eb30b2dd458c80986a4bfe99c, type: 3}
   characterName: "Goc\xFA"
   HP: 100
-  attackDMG: 20
+  attackDMG: 5
 --- !u!1 &4563071357845093531
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
 
-    public bool alive = true;
+    public bool playing = true;
 
     [SerializeField]
     private float playerSpeed = 2.0f;
@@ -20,48 +20,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float movementInput = 0.0f;
     [SerializeField]
-    private bool jumped = false;
+    public bool jumped = false;
     [SerializeField]
-    private bool blocked = false;
+    public bool blocked = false;
     [SerializeField]
-    private bool quickAttacked = false;
+    public bool quickAttacked = false;
     [SerializeField]
-    private bool slowAttacked = false;
+    public bool slowAttacked = false;
     [SerializeField]
-    private bool lowQuickAttacked = false;
+    public bool lowQuickAttacked = false;
     [SerializeField]
-    private bool lowSlowAttacked = false;
+    public bool lowSlowAttacked = false;
     [SerializeField]
-    private bool win = false;
+    public bool win = false;
     [SerializeField]
-    private bool die = false;
+    public bool die = false;
 
     private Animator animator;
-
-    Collider[] colliders;
-
-    [Header("Colliders (Se buscan solos del Prefab)")]
-    public Collider bodyCollider;
-    public Collider hitCollider;
 
     private void Start()
     {
         animator = gameObject.GetComponentInChildren<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
-
-        colliders = gameObject.GetComponentsInChildren<Collider>();
-        
-        foreach(Collider c in colliders)
-        {
-            if(c.tag == "Body")
-            {
-                bodyCollider = c;
-            }
-            else if(c.tag == "Hit")
-            {
-                hitCollider = c;
-            }
-        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -101,37 +81,39 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
+        if (playing)
         {
-            playerVelocity.y = 0f;
-        }
+            groundedPlayer = controller.isGrounded;
+            if (groundedPlayer && playerVelocity.y < 0)
+            {
+                playerVelocity.y = 0f;
+            }
 
-        Vector3 move = new Vector3(movementInput, 0, 0);
-        controller.Move(move * Time.deltaTime * playerSpeed);
+            Vector3 move = new Vector3(movementInput, 0, 0);
+            controller.Move(move * Time.deltaTime * playerSpeed);
 
-        // Este IF decide la dirección en la que mira el personaje
-        if (move != Vector3.zero)
-        {
-            gameObject.transform.forward = move;
-        }
+            // Este IF decide la dirección en la que mira el personaje
+            if (move != Vector3.zero)
+            {
+                gameObject.transform.forward = move;
+            }
 
-       
+
             AnimatorClipInfo[] m_CurrentClipInfo;
             m_CurrentClipInfo = animator.GetCurrentAnimatorClipInfo(0);
-            
-            if(m_CurrentClipInfo[0].clip.name == "Slow Attack Doge")
+
+            if (m_CurrentClipInfo[0].clip.name == "Slow Attack Doge")
             {
-               // print("a");
+                // print("a");
                 float animTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-               // int currentFrame = (int)(m_CurrentClipInfo[0].weight * (m_CurrentClipInfo[0].clip.length * m_CurrentClipInfo[0].clip.frameRate));
+                // int currentFrame = (int)(m_CurrentClipInfo[0].weight * (m_CurrentClipInfo[0].clip.length * m_CurrentClipInfo[0].clip.frameRate));
                 if (animTime >= 0.65f && animTime <= 0.85f)
                 {
 
-                Vector3 plus = gameObject.transform.forward * 10;
-                controller.Move(plus * Time.deltaTime * 1);
+                    Vector3 plus = gameObject.transform.forward * 10;
+                    controller.Move(plus * Time.deltaTime * 1);
                 }
-                
+
             }
 
             if (m_CurrentClipInfo[0].clip.name == "Low Slow Attack Doge")
@@ -141,8 +123,8 @@ public class PlayerController : MonoBehaviour
                 // int currentFrame = (int)(m_CurrentClipInfo[0].weight * (m_CurrentClipInfo[0].clip.length * m_CurrentClipInfo[0].clip.frameRate));
                 if (animTime >= 0.25f && animTime <= 0.65f)
                 {
-                  
-                Vector3 plus = gameObject.transform.forward * 10;
+
+                    Vector3 plus = gameObject.transform.forward * 10;
                     controller.Move(plus * Time.deltaTime * 1);
                 }
 
@@ -150,57 +132,50 @@ public class PlayerController : MonoBehaviour
 
             // print("a");
 
-        
 
-        // Changes the height position of the player..
-        if (jumped && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+
+            // Changes the height position of the player..
+            if (jumped && groundedPlayer)
+            {
+                playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            }
+
+            playerVelocity.y += gravityValue * Time.deltaTime;
+            controller.Move(playerVelocity * Time.deltaTime);
+
+            // ANIMACIONES
+
+            animator.SetBool("jumping", jumped);
+
+            if (movementInput > 0)
+            {
+                animator.SetBool("walking", true);
+            }
+            else if (movementInput < 0)
+            {
+                animator.SetBool("walkingBack", true);
+            }
+            else
+            {
+                animator.SetBool("walking", false);
+                animator.SetBool("walkingBack", false);
+            }
+
+            animator.SetBool("blocking", blocked);
+
+            animator.SetBool("quickAttacking", quickAttacked);
+
+            animator.SetBool("slowAttacking", slowAttacked);
+
+            animator.SetBool("lowQuickAttacking", lowQuickAttacked);
+
+            animator.SetBool("lowSlowAttacking", lowSlowAttacked);
+
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
         }
-
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
-
-        // ANIMACIONES
-
-        animator.SetBool("jumping", jumped);
-
-        if (movementInput > 0)
-        {
-            animator.SetBool("walking", true);
-        }
-        else if(movementInput < 0)
-        {
-            animator.SetBool("walkingBack", true);
-        }
-        else
-        {
-            animator.SetBool("walking", false);
-            animator.SetBool("walkingBack", false);
-        }
-
-        animator.SetBool("blocking", blocked);
-
-        animator.SetBool("quickAttacking", quickAttacked);
-
-        animator.SetBool("slowAttacking", slowAttacked);
-
-        animator.SetBool("lowQuickAttacking", lowQuickAttacked);
-
-        animator.SetBool("lowSlowAttacking", lowSlowAttacked);
 
         animator.SetBool("Winning", win);
 
         animator.SetBool("Dying", die);
-
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider == bodyCollider/* && collision.gameObject.GetComponent<Collider>().tag == "Hit" && blocked == false*/)
-        {
-            Debug.Log("Hit");
-        }
     }
 }

@@ -1321,7 +1321,7 @@ MonoBehaviour:
   playerControllerPrefab: {fileID: 5965096709858464886, guid: eae3b5221a559344e9de518fdd2925b5, type: 3}
   useTestingGameObjects: 1
   playerType1Testing: {fileID: 3077289075871316142, guid: a7e581eae2aa54544badb3022fed3d86, type: 3}
-  playerType2Testing: {fileID: 3077289075871316142, guid: a7e581eae2aa54544badb3022fed3d86, type: 3}
+  playerType2Testing: {fileID: 4401036054878118866, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
   player1SpawnPos: -5
   player2SpawnPos: 5
 --- !u!1 &963194225
@@ -1487,6 +1487,7 @@ MonoBehaviour:
   posZ: 0
   smoothTime: 0.25
   velocity: {x: 0, y: 0, z: 0}
+  distanciaAlaQueSeDanDeHostias: 5
 --- !u!1 &991728906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e19b77faf595a954e96fd297b76de6b1, type: 3}
