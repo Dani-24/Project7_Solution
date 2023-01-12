@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
     private bool lowQuickAttacked = false;
     [SerializeField]
     private bool lowSlowAttacked = false;
+    [SerializeField]
+    private bool win = false;
+    [SerializeField]
+    private bool die = false;
 
     private Animator animator;
 
@@ -86,6 +90,7 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new Vector3(movementInput, 0, 0);
         controller.Move(move * Time.deltaTime * playerSpeed);
 
+        // Este IF decide la dirección en la que mira el personaje
         if (move != Vector3.zero)
         {
             gameObject.transform.forward = move;
@@ -99,5 +104,39 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+
+        // ANIMACIONES
+
+        animator.SetBool("jumping", jumped);
+
+        if (movementInput > 0)
+        {
+            animator.SetBool("walking", true);
+        }
+        else if(movementInput < 0)
+        {
+            animator.SetBool("walkingBack", true);
+        }
+        else
+        {
+            animator.SetBool("walking", false);
+            animator.SetBool("walkingBack", false);
+        }
+
+        animator.SetBool("blocking", blocked);
+
+        animator.SetBool("quickAttacking", quickAttacked);
+
+        animator.SetBool("slowAttacking", slowAttacked);
+
+        animator.SetBool("lowQuickAttacking", lowQuickAttacked);
+
+        animator.SetBool("lowSlowAttacking", lowSlowAttacked);
+
+        animator.SetBool("Winning", win);
+
+        animator.SetBool("Dying", die);
+
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
     }
 }

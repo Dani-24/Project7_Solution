@@ -15,6 +15,13 @@ public class UIscript : MonoBehaviour
 
     private GameObject[] players; 
 
+    public Image fade;
+
+    private void Awake()
+    {
+        fade.enabled = true;
+    }
+
     void Start()
     {
         canvas = GetComponent<Canvas>();
@@ -50,6 +57,20 @@ public class UIscript : MonoBehaviour
         {
             playerSlider1.value = players[0].GetComponent<PrefabPropierties>().HP;
             playerSlider2.value = players[1].GetComponent<PrefabPropierties>().HP;
+        }
+
+        // Fade
+        if(fade.color.a > 0.8f)
+        {
+            Color color = fade.color;
+            color.a -= Time.deltaTime / 10;
+            fade.color = color;
+        }
+        else if(fade.color.a > 0)
+        {
+            Color color = fade.color;
+            color.a -= Time.deltaTime;
+            fade.color = color;
         }
     }
 }
