@@ -50,7 +50,7 @@ public class CameraController : MonoBehaviour
 
                 float dist =  Vector3.Distance(players[0].transform.position, players[1].transform.position);
 
-                Debug.Log("Distance between the 2 Players: " + dist);
+                //Debug.Log("Distance between the 2 Players: " + dist);
 
                 //Super Escalado de cámara que seguro que me felicita alguien si lo ve. Imagina usar exponenciales (Que seria lo suyo aquí) 
                 if (dist > 25)

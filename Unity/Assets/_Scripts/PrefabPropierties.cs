@@ -10,22 +10,22 @@ public class PrefabPropierties : MonoBehaviour
     public int HP;
     public int attackDMG;
 
-    [Header("Animations")]
-    public Animation iddle;
-    public Animation walkForward;
-    public Animation walkBackwards;
-    public Animation blockHighAttack;
-    public Animation blockLowAttack;
-    public Animation attackQuick;
-    public Animation attackSlow;
-    public Animation lowQuickAttack;
-    public Animation lowSlowAttack;
-    public Animation die;
-    public Animation win;
+    //[Header("Animations")]
+    //public Animation iddle;
+    //public Animation walkForward;
+    //public Animation walkBackwards;
+    //public Animation blockHighAttack;
+    //public Animation blockLowAttack;
+    //public Animation attackQuick;
+    //public Animation attackSlow;
+    //public Animation lowQuickAttack;
+    //public Animation lowSlowAttack;
+    //public Animation die;
+    //public Animation win;
 
     void Start()
     {
-        
+
     }
 
     void Update()

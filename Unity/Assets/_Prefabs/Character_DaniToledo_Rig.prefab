@@ -1727,7 +1727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cdb7210b2656d4888d543f2bcd850b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: 21300000, guid: a76d88260ed84474e8df719650a3da64, type: 3}
+  characterPhoto: {fileID: 21300000, guid: 7b3743cf785ae2a47b47e052992a333e, type: 3}
   characterName: Buff SUS
   HP: 100
   attackDMG: 10

@@ -6,13 +6,27 @@ public class PlayerManager : MonoBehaviour
 {
     public GameObject playerControllerPrefab;
 
-    // Se asignan desde selección de personaje
     public static GameObject playerType1;
     public static GameObject playerType2;
+
+    [Header("Players Prefabs for testing without using Title Scene")]
+    public bool useTestingGameObjects = false;
+
+    public GameObject playerType1Testing;
+    public GameObject playerType2Testing;
 
     [Header("Players Start Positions")]
     public float player1SpawnPos = -5.0f;
     public float player2SpawnPos = 5.0f;
+
+    private void Awake()
+    {
+        if (useTestingGameObjects == true)
+        {
+            playerType1 = playerType1Testing;
+            playerType2 = playerType2Testing;
+        }
+    }
 
     void Start()
     {

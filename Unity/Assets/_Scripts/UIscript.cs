@@ -8,7 +8,7 @@ using TMPro;
 public class UIscript : MonoBehaviour
 {
     public TextMeshProUGUI textPlayer1, textPlayer2;
-    public Image player1Image, player2Image;
+    public GameObject player1Image, player2Image;
     public Slider playerSlider1, playerSlider2;
 
     private GameObject[] players; 
@@ -16,13 +16,15 @@ public class UIscript : MonoBehaviour
     void Start()
     {
         textPlayer1.text = "Player 1: " + PlayerManager.playerType1.GetComponent<PrefabPropierties>().characterName;
-        player1Image.sprite = PlayerManager.playerType1.GetComponent<PrefabPropierties>().characterPhoto;
+        player1Image.GetComponent<Image>().sprite = PlayerManager.playerType1.GetComponent<PrefabPropierties>().characterPhoto;
 
         playerSlider1.maxValue = 100;
         playerSlider1.minValue = 0;
 
         textPlayer2.text = "Player 2: " + PlayerManager.playerType2.GetComponent<PrefabPropierties>().characterName;
-        player2Image.sprite = PlayerManager.playerType2.GetComponent<PrefabPropierties>().characterPhoto;
+        player2Image.GetComponent<Image>().sprite = PlayerManager.playerType2.GetComponent<PrefabPropierties>().characterPhoto;
+
+        player2Image.transform.localScale = new Vector3(-player2Image.transform.localScale.x, player2Image.transform.localScale.y, player2Image.transform.localScale.z);
 
         playerSlider2.maxValue = 100;
         playerSlider2.minValue = 0;

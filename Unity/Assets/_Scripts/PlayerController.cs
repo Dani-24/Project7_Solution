@@ -32,8 +32,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool lowSlowAttacked = false;
 
+    private Animator animator;
+
     private void Start()
     {
+        animator = gameObject.GetComponentInChildren<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
     }
 
