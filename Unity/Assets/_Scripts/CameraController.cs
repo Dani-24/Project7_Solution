@@ -29,6 +29,13 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private float distanciaAlaQueSeDanDeHostias = 5.0f;
 
+    [Header("Attack Cooldowns")]
+    float kickCooldownP1 = 0.30f;
+    float kickCooldownP2 = 0.30f;
+
+    [SerializeField]
+    float kickCooldown = 0.5f;
+
     private void Start()
     {
         posX = transform.position.x;
@@ -80,57 +87,75 @@ public class CameraController : MonoBehaviour
             transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
         }
 
+        if(kickCooldownP1 > 0.0f)
+        {
+            kickCooldownP1 -= Time.deltaTime;
+        }
+
+        if (kickCooldownP2 > 0.0f)
+        {
+            kickCooldownP2 -= Time.deltaTime;
+        }
+
         // COMPROBACIONES DE LOS ATAQUES
         if (dist < distanciaAlaQueSeDanDeHostias)
         {
             // Player 1 Quick Attack
-            if (players[0].GetComponentInParent<PlayerController>().quickAttacked == true && players[1].GetComponentInParent<PlayerController>().blocked == false)
+            if (players[0].GetComponentInParent<PlayerController>().quickAttacked == true && players[1].GetComponentInParent<PlayerController>().blocked == false && kickCooldownP1 <= 0.0f)
             {
                 players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG;
+                kickCooldownP1 = kickCooldown;
             }
 
             // Player 2 Quick Attack
-            if (players[1].GetComponentInParent<PlayerController>().quickAttacked == true && players[0].GetComponentInParent<PlayerController>().blocked == false)
+            if (players[1].GetComponentInParent<PlayerController>().quickAttacked == true && players[0].GetComponentInParent<PlayerController>().blocked == false && kickCooldownP2 <= 0.0f)
             {
                 players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG;
+                kickCooldownP2 = kickCooldown;
             }
 
             // Player 1 Slow Attack
-            if (players[0].GetComponentInParent<PlayerController>().slowAttacked == true && players[1].GetComponentInParent<PlayerController>().blocked == false)
+            if (players[0].GetComponentInParent<PlayerController>().slowAttacked == true && players[1].GetComponentInParent<PlayerController>().blocked == false && kickCooldownP1 <= 0.0f)
             {
                 players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
+                kickCooldownP1 = kickCooldown;
             }
 
             // Player 2 Slow Attack
-            if (players[1].GetComponentInParent<PlayerController>().slowAttacked == true && players[0].GetComponentInParent<PlayerController>().blocked == false)
+            if (players[1].GetComponentInParent<PlayerController>().slowAttacked == true && players[0].GetComponentInParent<PlayerController>().blocked == false && kickCooldownP2 <= 0.0f)
             {
                 players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
+                kickCooldownP2 = kickCooldown;
             }
 
             // LOW ANIMATIONS
 
             // Player 1 Quick Attack
-            if (players[0].GetComponentInParent<PlayerController>().lowQuickAttacked == true && players[1].GetComponentInParent<PlayerController>().jumped == false)
+            if (players[0].GetComponentInParent<PlayerController>().lowQuickAttacked == true && players[1].GetComponentInParent<PlayerController>().jumped == false && kickCooldownP1 <= 0.0f)
             {
                 players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG;
+                kickCooldownP1 = kickCooldown;
             }
 
             // Player 2 Quick Attack
-            if (players[1].GetComponentInParent<PlayerController>().lowQuickAttacked == true && players[0].GetComponentInParent<PlayerController>().jumped == false)
+            if (players[1].GetComponentInParent<PlayerController>().lowQuickAttacked == true && players[0].GetComponentInParent<PlayerController>().jumped == false && kickCooldownP2 <= 0.0f)
             {
                 players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG;
+                kickCooldownP2 = kickCooldown;
             }
 
             // Player 1 Slow Attack
-            if (players[0].GetComponentInParent<PlayerController>().lowSlowAttacked == true && players[1].GetComponentInParent<PlayerController>().jumped == false)
+            if (players[0].GetComponentInParent<PlayerController>().lowSlowAttacked == true && players[1].GetComponentInParent<PlayerController>().jumped == false && kickCooldownP1 <= 0.0f)
             {
                 players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
+                kickCooldownP1 = kickCooldown;
             }
 
             // Player 2 Slow Attack
-            if (players[1].GetComponentInParent<PlayerController>().lowSlowAttacked == true && players[0].GetComponentInParent<PlayerController>().jumped == false)
+            if (players[1].GetComponentInParent<PlayerController>().lowSlowAttacked == true && players[0].GetComponentInParent<PlayerController>().jumped == false && kickCooldownP2 <= 0.0f)
             {
                 players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
+                kickCooldownP2 = kickCooldown;
             }
         }
 
@@ -153,5 +178,16 @@ public class CameraController : MonoBehaviour
             players[1].GetComponentInParent<PlayerController>().playing = false;
         }
 
+        // HAcer que los players se miren siempre
+        if (players[0].transform.position.x < players[1].transform.position.x)
+        {
+            players[0].GetComponentInParent<PlayerController>().playerDir = new Vector3(1, 0, 0);
+            players[1].GetComponentInParent<PlayerController>().playerDir = new Vector3(-1, 0, 0);
+        }
+        else
+        {
+            players[0].GetComponentInParent<PlayerController>().playerDir = new Vector3(-1, 0, 0);
+            players[1].GetComponentInParent<PlayerController>().playerDir = new Vector3(1, 0, 0);
+        }
     }
 }

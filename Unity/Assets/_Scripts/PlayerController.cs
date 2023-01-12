@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+    public Vector3 playerDir = new Vector3(1, 0, 0);
+
     private void Start()
     {
         animator = gameObject.GetComponentInChildren<Animator>();
@@ -81,8 +83,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (playing)
+        if(playing == false)
         {
+            jumped = blocked = quickAttacked = slowAttacked = lowQuickAttacked = lowSlowAttacked = false;
+            movementInput = 0.0f;
+        }
+
             groundedPlayer = controller.isGrounded;
             if (groundedPlayer && playerVelocity.y < 0)
             {
@@ -93,9 +99,9 @@ public class PlayerController : MonoBehaviour
             controller.Move(move * Time.deltaTime * playerSpeed);
 
             // Este IF decide la dirección en la que mira el personaje
-            if (move != Vector3.zero)
+            if (playerDir != Vector3.zero)
             {
-                gameObject.transform.forward = move;
+                gameObject.transform.forward = playerDir;
             }
 
 
@@ -132,8 +138,6 @@ public class PlayerController : MonoBehaviour
 
             // print("a");
 
-
-
             // Changes the height position of the player..
             if (jumped && groundedPlayer)
             {
@@ -143,7 +147,7 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y += gravityValue * Time.deltaTime;
             controller.Move(playerVelocity * Time.deltaTime);
 
-            // ANIMACIONES
+        // ANIMACIONES
 
             animator.SetBool("jumping", jumped);
 
@@ -172,10 +176,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("lowSlowAttacking", lowSlowAttacked);
 
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
-        }
 
-        animator.SetBool("Winning", win);
+            animator.SetBool("Winning", win);
 
-        animator.SetBool("Dying", die);
+            animator.SetBool("Dying", die);
+
     }
 }
