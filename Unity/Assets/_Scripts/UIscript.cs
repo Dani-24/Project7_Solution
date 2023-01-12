@@ -55,8 +55,13 @@ public class UIscript : MonoBehaviour
             SceneManager.LoadScene("TitleScene", LoadSceneMode.Single);
         }
 
-        // Update HP bar
-        players = GameObject.FindGameObjectsWithTag("Player");
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            OnRestart();
+        }
+
+            // Update HP bar
+            players = GameObject.FindGameObjectsWithTag("Player");
 
         if (players.Length > 0)
         {
@@ -77,5 +82,11 @@ public class UIscript : MonoBehaviour
             color.a -= Time.deltaTime;
             fade.color = color;
         }
+    }
+
+    public void OnRestart()
+    {
+        audioSource.Play();
+        SceneManager.LoadScene("BattleScene", LoadSceneMode.Single);
     }
 }
