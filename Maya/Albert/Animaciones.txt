@@ -8,4 +8,4 @@ blokeo bajo 265 - 295
 caminar 300 -329
 muelto 340- 364
 victoria 370 420
-caminar hacia atras 434- 456
+caminar hacia atras 425- 456
