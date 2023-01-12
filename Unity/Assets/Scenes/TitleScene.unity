@@ -2277,6 +2277,10 @@ MonoBehaviour:
   button2: {fileID: 1997096397}
   button3: {fileID: 564892919}
   button4: {fileID: 1151938969}
+  amogusC: {fileID: 8300000, guid: 5f00e7f6e7c177443ba7ee9e1c9996c9, type: 3}
+  thorC: {fileID: 8300000, guid: 49e82ec530fcbdd4cbfe9b1d1ad6a3a3, type: 3}
+  gokuC: {fileID: 8300000, guid: fdaf7f062223aea4f9d4280fa378b14e, type: 3}
+  dogeC: {fileID: 8300000, guid: 5fe0adc56c7617246a7acefcbf3f9395, type: 3}
 --- !u!1 &5142210681248082439
 GameObject:
   m_ObjectHideFlags: 0
