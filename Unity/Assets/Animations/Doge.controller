@@ -579,7 +579,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Start Backwards
-  m_Speed: 1.1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2491611402329755853}
@@ -1084,7 +1084,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Stop Backwards
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7458500916049188842}
@@ -1158,7 +1158,7 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 0}
   - m_Name: Winning
     m_Type: 4
@@ -2098,7 +2098,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Start Walking
-  m_Speed: 1.1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -870796817818718958}

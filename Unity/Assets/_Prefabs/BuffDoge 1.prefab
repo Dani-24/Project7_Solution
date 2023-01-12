@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterPhoto: {fileID: 21300000, guid: 149345f0a6e554741b3fc19cfe1b32e0, type: 3}
-  characterName: The Doge
+  characterName: Big Doge
   HP: 100
   attackDMG: 10
 --- !u!1 &3127513200204538189

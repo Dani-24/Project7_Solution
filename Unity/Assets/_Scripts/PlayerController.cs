@@ -116,6 +116,42 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.forward = move;
         }
 
+       
+            AnimatorClipInfo[] m_CurrentClipInfo;
+            m_CurrentClipInfo = animator.GetCurrentAnimatorClipInfo(0);
+            
+            if(m_CurrentClipInfo[0].clip.name == "Slow Attack Doge")
+            {
+               // print("a");
+                float animTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+               // int currentFrame = (int)(m_CurrentClipInfo[0].weight * (m_CurrentClipInfo[0].clip.length * m_CurrentClipInfo[0].clip.frameRate));
+                if (animTime >= 0.65f && animTime <= 0.85f)
+                {
+
+                Vector3 plus = gameObject.transform.forward * 10;
+                controller.Move(plus * Time.deltaTime * 1);
+                }
+                
+            }
+
+            if (m_CurrentClipInfo[0].clip.name == "Low Slow Attack Doge")
+            {
+                //print("a");
+                float animTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+                // int currentFrame = (int)(m_CurrentClipInfo[0].weight * (m_CurrentClipInfo[0].clip.length * m_CurrentClipInfo[0].clip.frameRate));
+                if (animTime >= 0.25f && animTime <= 0.65f)
+                {
+                  
+                Vector3 plus = gameObject.transform.forward * 10;
+                    controller.Move(plus * Time.deltaTime * 1);
+                }
+
+            }
+
+            // print("a");
+
+        
+
         // Changes the height position of the player..
         if (jumped && groundedPlayer)
         {
