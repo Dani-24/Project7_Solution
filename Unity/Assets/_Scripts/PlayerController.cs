@@ -38,10 +38,30 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+    Collider[] colliders;
+
+    [Header("Colliders (Se buscan solos del Prefab)")]
+    public Collider bodyCollider;
+    public Collider hitCollider;
+
     private void Start()
     {
         animator = gameObject.GetComponentInChildren<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
+
+        colliders = gameObject.GetComponentsInChildren<Collider>();
+        
+        foreach(Collider c in colliders)
+        {
+            if(c.tag == "Body")
+            {
+                bodyCollider = c;
+            }
+            else if(c.tag == "Hit")
+            {
+                hitCollider = c;
+            }
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -138,5 +158,13 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Dying", die);
 
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider == bodyCollider/* && collision.gameObject.GetComponent<Collider>().tag == "Hit" && blocked == false*/)
+        {
+            Debug.Log("Hit");
+        }
     }
 }

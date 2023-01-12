@@ -2267,9 +2267,9 @@ MonoBehaviour:
   textSelectCharacters: {fileID: 1959817950}
   charactersScale: 10
   character1: {fileID: 4401036054878118866, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
-  character2: {fileID: 4401036054878118866, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
-  character3: {fileID: 4401036054878118866, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
-  character4: {fileID: 4401036054878118866, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
+  character2: {fileID: 1928845931633963122, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
+  character3: {fileID: 8734837917430058270, guid: 8b3bd81adb8e9f04aac23353cc4ba88c, type: 3}
+  character4: {fileID: 8734837917430058270, guid: 8b3bd81adb8e9f04aac23353cc4ba88c, type: 3}
   button1: {fileID: 1366838576}
   button2: {fileID: 1997096397}
   button3: {fileID: 564892919}

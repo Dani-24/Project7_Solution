@@ -1894,7 +1894,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1265357062759492296}
   - component: {fileID: 5147437764403425458}
-  - component: {fileID: 6921257215809286067}
   - component: {fileID: 114571501871887633}
   m_Layer: 0
   m_Name: ThorFinalFinal
@@ -1940,20 +1939,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6921257215809286067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928845931633963122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c7ac06c6524dd94b8fef2c87d050c88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 5147437764403425458}
-  enableRagdoll: 0
 --- !u!114 &114571501871887633
 MonoBehaviour:
   m_ObjectHideFlags: 0

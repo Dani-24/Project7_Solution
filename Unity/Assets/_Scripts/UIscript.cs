@@ -17,8 +17,12 @@ public class UIscript : MonoBehaviour
 
     public Image fade;
 
+    AudioSource audioSource;
+
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
+
         fade.enabled = true;
     }
 
@@ -47,6 +51,7 @@ public class UIscript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            audioSource.Play();
             SceneManager.LoadScene("TitleScene", LoadSceneMode.Single);
         }
 
