@@ -1,18 +1,17 @@
-doge animations. (goge-animations-new-2)
-0-50 idle
-50-57 start walking
-58-74 walking
-75-85 block high attack (dodge) - faster better
-85-95 block high attack (dodge) recuperacion - faster better
-95-135 Block Low attack (jump in place) -faster better
-135-175 Attack quick (short range) -faster
-175-275 Attack slow (long range) -faster
-275-315 low Attack quick (short range) -faster
-315-415 low Attack slow (long range) -faster
-440-448 stop walking
-448-455 start walk backwards
-456-473 walk backwards
-474-481 stop walk backwards
-481-535 die
-535-590 win
+doge animations (doge_animations.ma)
+0-50 Idle 		
+50-57 Start walking front 		
+58-74 Walking front loop		
+75-95 Block high attack	(dodge)
+95-135 Block Low attack (jump in place) 
+135-175 Quick attack (short range) 	
+175-275 Slow attack (long range) 
+275-315 Low quick attack (short range)	
+315-415 Low slow attack (long range)
+440-448 End walking front 		
+448-455 Start walking backwards
+456-473 Walking backwards loop
+474-481 End walking backwards
+481-535 Die 
+536-590 Win 
 

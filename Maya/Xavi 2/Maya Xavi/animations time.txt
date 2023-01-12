@@ -1,0 +1,17 @@
+doge animations (doge_animations.ma)
+0-50 Idle 		
+50-57 Start walking front 		
+58-74 Walking front loop		
+75-95 Block high attack	(dodge)
+95-135 Block Low attack (jump in place) 
+135-175 Quick attack (short range) 	
+175-275 Slow attack (long range) 
+275-315 Low quick attack (short range)	
+315-415 Low slow attack (long range)
+440-448 End walking front 		
+448-455 Start walking backwards
+456-473 Walking backwards loop
+474-481 End walking backwards
+481-535 Die 
+536-590 Win 
+
