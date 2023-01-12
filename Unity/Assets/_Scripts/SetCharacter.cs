@@ -9,7 +9,7 @@ public class SetCharacter : MonoBehaviour
     void Start()
     {
         GameObject go;
-        go = Instantiate(character, transform.position, Quaternion.identity) as GameObject;
+        go = Instantiate(character, transform.position, character.transform.rotation/* Quaternion.identity*/) as GameObject;
         go.transform.parent = transform;
         go.tag = "Player";
     }
