@@ -26,18 +26,34 @@ public class CameraController : MonoBehaviour
 
     float dist;
 
+    [Header("Attack Cooldowns y demas")]
     [SerializeField]
     private float distanciaAlaQueSeDanDeHostias = 5.0f;
 
-    [Header("Attack Cooldowns")]
     float kickCooldownP1 = 0.30f;
     float kickCooldownP2 = 0.30f;
 
     [SerializeField]
     float kickCooldown = 0.5f;
 
+    [Header("Clips de audio")]
+    [SerializeField]
+    AudioClip[] kicks;
+    [SerializeField]
+    AudioClip[] blocks;
+    [SerializeField]
+    AudioClip[] dies;
+    [SerializeField]
+    AudioClip[] p1Wins;
+    [SerializeField]
+    AudioClip[] p2Wins;
+
+    AudioSource audioSource;
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         posX = transform.position.x;
         originalPosZ = posZ = transform.position.z;
     }
@@ -105,6 +121,8 @@ public class CameraController : MonoBehaviour
             {
                 players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG;
                 kickCooldownP1 = kickCooldown;
+
+                kickAudio();
             }
 
             // Player 2 Quick Attack
@@ -112,6 +130,8 @@ public class CameraController : MonoBehaviour
             {
                 players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG;
                 kickCooldownP2 = kickCooldown;
+
+                kickAudio();
             }
 
             // Player 1 Slow Attack
@@ -119,6 +139,8 @@ public class CameraController : MonoBehaviour
             {
                 players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
                 kickCooldownP1 = kickCooldown;
+
+                kickAudio();
             }
 
             // Player 2 Slow Attack
@@ -126,6 +148,8 @@ public class CameraController : MonoBehaviour
             {
                 players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
                 kickCooldownP2 = kickCooldown;
+
+                kickAudio();
             }
 
             // LOW ANIMATIONS
@@ -135,6 +159,8 @@ public class CameraController : MonoBehaviour
             {
                 players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG;
                 kickCooldownP1 = kickCooldown;
+
+                kickAudio();
             }
 
             // Player 2 Quick Attack
@@ -142,6 +168,8 @@ public class CameraController : MonoBehaviour
             {
                 players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG;
                 kickCooldownP2 = kickCooldown;
+
+                kickAudio();
             }
 
             // Player 1 Slow Attack
@@ -149,6 +177,8 @@ public class CameraController : MonoBehaviour
             {
                 players[1].GetComponent<PrefabPropierties>().HP -= players[0].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
                 kickCooldownP1 = kickCooldown;
+
+                kickAudio();
             }
 
             // Player 2 Slow Attack
@@ -156,21 +186,50 @@ public class CameraController : MonoBehaviour
             {
                 players[0].GetComponent<PrefabPropierties>().HP -= players[1].GetComponentInParent<PrefabPropierties>().attackDMG * 2;
                 kickCooldownP2 = kickCooldown;
+
+                kickAudio();
             }
         }
 
         // Si la vida baja P1
         if (players[0].GetComponent<PrefabPropierties>().HP <= 0)
         {
+            if (players[0].GetComponentInParent<PlayerController>().playing == true)
+            {
+                int randomNumber = Random.Range(0, p2Wins.Length);
+                for (int i = 0; i < p2Wins.Length; i++)
+                {
+                    if (i == randomNumber)
+                    {
+                        audioSource.clip = p2Wins[i];
+                    }
+                }
+                audioSource.Play();
+            }
+
             players[0].GetComponentInParent<PlayerController>().die = true;
             players[1].GetComponentInParent<PlayerController>().win = true;
 
             players[0].GetComponentInParent<PlayerController>().playing = false;
             players[1].GetComponentInParent<PlayerController>().playing = false;
+
         }
         // P2
         if (players[1].GetComponent<PrefabPropierties>().HP <= 0)
         {
+            if (players[0].GetComponentInParent<PlayerController>().playing == true)
+            {
+                int randomNumber = Random.Range(0, p1Wins.Length);
+                for (int i = 0; i < p1Wins.Length; i++)
+                {
+                    if (i == randomNumber)
+                    {
+                        audioSource.clip = p1Wins[i];
+                    }
+                }
+                audioSource.Play();
+            }
+
             players[1].GetComponentInParent<PlayerController>().die = true;
             players[0].GetComponentInParent<PlayerController>().win = true;
 
@@ -188,6 +247,22 @@ public class CameraController : MonoBehaviour
         {
             players[0].GetComponentInParent<PlayerController>().playerDir = new Vector3(-1, 0, 0);
             players[1].GetComponentInParent<PlayerController>().playerDir = new Vector3(1, 0, 0);
+        }
+    }
+
+    void kickAudio()
+    {
+        if (players[0].GetComponentInParent<PlayerController>().playing == true)
+        {
+            int randomNumber = Random.Range(0, kicks.Length);
+            for (int i = 0; i < kicks.Length; i++)
+            {
+                if (i == randomNumber)
+                {
+                    audioSource.clip = kicks[i];
+                }
+            }
+            audioSource.Play();
         }
     }
 }
