@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: 5fadee2df0252074495b1f6211fe84f2
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Idle
+  - first:
+      74: 1247732717663806902
+    second: Start Walking
+  - first:
+      74: -4615507145190104321
+    second: Walking Loop
+  - first:
+      74: 2205345775995713598
+    second: Block High
+  - first:
+      74: 2430597375452740978
+    second: Block Low
+  - first:
+      74: 3827272880974483697
+    second: Quick Attack
+  - first:
+      74: -9109064125478143590
+    second: Slow Attack
+  - first:
+      74: -4155751170109831144
+    second: Low Quick Attack
+  - first:
+      74: -3200102893758237867
+    second: Low Slow Attack
+  - first:
+      74: -2780201266970454485
+    second: Stop Walking
+  - first:
+      74: -6755386366961990960
+    second: Start Walking Backwards
+  - first:
+      74: -8382337689458471970
+    second: Walking Backwards Loop
+  - first:
+      74: -1003715244152346058
+    second: Stop Walking Backwards
+  - first:
+      74: -4630339522487117836
+    second: Die
+  - first:
+      74: 4821609917503249430
+    second: Win
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Start Walking
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 50
+      lastFrame: 57
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walking Loop
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 58
+      lastFrame: 74
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Block High
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 75
+      lastFrame: 95
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Block Low
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 95
+      lastFrame: 135
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Quick Attack
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 135
+      lastFrame: 175
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Slow Attack
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 175
+      lastFrame: 275
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Low Quick Attack
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 275
+      lastFrame: 315
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Low Slow Attack
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 315
+      lastFrame: 415
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Stop Walking
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 440
+      lastFrame: 448
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Start Walking Backwards
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 448
+      lastFrame: 455
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walking Backwards Loop
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 456
+      lastFrame: 473
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Stop Walking Backwards
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 474
+      lastFrame: 481
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Die
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 481
+      lastFrame: 535
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Win
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 535
+      lastFrame: 590
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: BuffDoge(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buffDog_arms:BuffDoge
+      parentName: BuffDoge(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buffDog_arms:Body
+      parentName: buffDog_arms:BuffDoge
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buffDog_arms:Nose
+      parentName: buffDog_arms:BuffDoge
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buffDog_arms:Eye_right
+      parentName: buffDog_arms:BuffDoge
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buffDog_arms:Eye_Left
+      parentName: buffDog_arms:BuffDoge
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buffDog_arms:QuickRigCharacter_Reference
+      parentName: BuffDoge(Clone)
+      position: {x: 0.000009999871, y: 0.00007979214, z: 0.0008424043}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buffDog_arms:QuickRigCharacter_Hips
+      parentName: buffDog_arms:QuickRigCharacter_Reference
+      position: {x: -0.00000007808208, y: 0.006273704, z: -0.0011471459}
+      rotation: {x: -0.50081706, y: 0.49918163, z: 0.50081706, w: -0.49918163}
+      scale: {x: 0.99999976, y: 0.9999998, z: 0.99999994}
+    - name: buffDog_arms:QuickRigCharacter_Spine
+      parentName: buffDog_arms:QuickRigCharacter_Hips
+      position: {x: -0.0013379722, y: -8.730843e-10, z: 2.392401e-10}
+      rotation: {x: 0, y: -0, z: -0.0083826315, w: 0.9999649}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buffDog_arms:QuickRigCharacter_Spine1
+      parentName: buffDog_arms:QuickRigCharacter_Spine
+      position: {x: -0.0021938148, y: 2.3891358e-10, z: 3.9200798e-10}
+      rotation: {x: -2.1622806e-21, y: 1.0839866e-19, z: -0.019942546, w: 0.99980116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buffDog_arms:QuickRigCharacter_Spine2
+      parentName: buffDog_arms:QuickRigCharacter_Spine1
+      position: {x: -0.0034271488, y: -1.7246785e-10, z: 6.066926e-10}
+      rotation: {x: -1.0106742e-20, y: 1.0794813e-19, z: 0.053439595, w: -0.9985711}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000007}
+    - name: buffDog_arms:QuickRigCharacter_LeftShoulder
+      parentName: buffDog_arms:QuickRigCharacter_Spine2
+      position: {x: -0.00108812, y: -0.0011112087, z: 0.0017909653}
+      rotation: {x: -0.55452174, y: 0.4387547, z: 0.52475685, w: 0.4739518}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: buffDog_arms:QuickRigCharacter_LeftArm
+      parentName: buffDog_arms:QuickRigCharacter_LeftShoulder
+      position: {x: -0.0038719424, y: 3.0478267e-10, z: 2.3840946e-10}
+      rotation: {x: 0.58084255, y: 0.031341698, z: 0.040516403, w: 0.8124027}
+      scale: {x: 0.9999998, y: 1.0000004, z: 1}
+    - name: buffDog_arms:QuickRigCharacter_LeftForeArm
+      parentName: buffDog_arms:QuickRigCharacter_LeftArm
+      position: {x: -0.006016169, y: 0.000000070514496, z: -0.0000001877895}
+      rotation: {x: -0.0027830293, y: -0.0149184, z: -0.038377814, w: 0.99914813}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: buffDog_arms:QuickRigCharacter_LeftHand
+      parentName: buffDog_arms:QuickRigCharacter_LeftForeArm
+      position: {x: -0.0042166333, y: 0.00000001888486, z: 0.0000000011342375}
+      rotation: {x: -0.00000069093204, y: 0.0000009930516, z: 0.00004581898, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: buffDog_arms:QuickRigCharacter_RightShoulder
+      parentName: buffDog_arms:QuickRigCharacter_Spine2
+      position: {x: -0.0010881206, y: -0.0011112089, z: -0.0017909644}
+      rotation: {x: 0.43875462, y: 0.55452174, z: -0.47395173, w: 0.5247568}
+      scale: {x: 1, y: 1.000001, z: 1.0000011}
+    - name: buffDog_arms:QuickRigCharacter_RightArm
+      parentName: buffDog_arms:QuickRigCharacter_RightShoulder
+      position: {x: 0.0038719445, y: -0.000000001542597, z: 2.5094135e-10}
+      rotation: {x: -0.5808438, y: -0.031341504, z: -0.04051834, w: -0.8124017}
+      scale: {x: 0.99999976, y: 0.99999994, z: 0.99999994}
+    - name: buffDog_arms:QuickRigCharacter_RightForeArm
+      parentName: buffDog_arms:QuickRigCharacter_RightArm
+      position: {x: 0.0060161673, y: -0.00000009093989, z: 0.00000019999769}
+      rotation: {x: 0.0027815693, y: 0.014925487, z: 0.03838072, w: -0.99914783}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: buffDog_arms:QuickRigCharacter_RightHand
+      parentName: buffDog_arms:QuickRigCharacter_RightForeArm
+      position: {x: 0.0042166323, y: -0.000000007279459, z: -0.000000057249014}
+      rotation: {x: 0.00000016843838, y: 0.00000094436086, z: 0.000047428657, w: 1}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000006}
+    - name: buffDog_arms:QuickRigCharacter_Neck
+      parentName: buffDog_arms:QuickRigCharacter_Spine2
+      position: {x: -0.004115324, y: 7.379846e-10, z: 6.9198364e-10}
+      rotation: {x: -0.000000027267827, y: -0.000000032137553, z: 0.09736742, w: -0.9952485}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000007}
+    - name: buffDog_arms:QuickRigCharacter_Head
+      parentName: buffDog_arms:QuickRigCharacter_Neck
+      position: {x: -0.0024760012, y: -0.0000000016150727, z: 3.168478e-10}
+      rotation: {x: -0.0000000046478745, y: 0.0000000027967544, z: 0.12843658, w: -0.99171776}
+      scale: {x: 1.0000007, y: 1.000001, z: 1.0000006}
+    - name: buffDog_arms:QuickRigCharacter_LeftUpLeg
+      parentName: buffDog_arms:QuickRigCharacter_Hips
+      position: {x: 0.0001436565, y: 0.000016640872, z: 0.0021513402}
+      rotation: {x: -0.04509005, y: -0.10655008, z: 0.99325514, w: -0.0076377094}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999999}
+    - name: buffDog_arms:QuickRigCharacter_LeftLeg
+      parentName: buffDog_arms:QuickRigCharacter_LeftUpLeg
+      position: {x: -0.0028191223, y: -0.000000035872393, z: -0.000000002887581}
+      rotation: {x: -0.064669356, y: 0.0078617, z: 0.12083669, w: -0.99053246}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: buffDog_arms:QuickRigCharacter_LeftFoot
+      parentName: buffDog_arms:QuickRigCharacter_LeftLeg
+      position: {x: -0.002602043, y: 0.000000007816887, z: 6.7561366e-11}
+      rotation: {x: -0.027328733, y: 0.040405307, z: -0.57002693, w: -0.8201767}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000005}
+    - name: buffDog_arms:QuickRigCharacter_LeftToeBase
+      parentName: buffDog_arms:QuickRigCharacter_LeftFoot
+      position: {x: -0.0011074784, y: 1.8962026e-11, z: 0.0000000012879826}
+      rotation: {x: -0.000000005587935, y: -0, z: -0.00000006926711, w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 0.99999994}
+    - name: buffDog_arms:QuickRigCharacter_RightUpLeg
+      parentName: buffDog_arms:QuickRigCharacter_Hips
+      position: {x: 0.00014365572, y: 0.00001664069, z: -0.0021513402}
+      rotation: {x: 0.10662936, y: -0.045099333, z: -0.0076416135, w: -0.99324614}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: buffDog_arms:QuickRigCharacter_RightLeg
+      parentName: buffDog_arms:QuickRigCharacter_RightUpLeg
+      position: {x: 0.002819124, y: 0.00000002077346, z: 0.000000012093257}
+      rotation: {x: -0.064736426, y: 0.007870801, z: 0.12084058, w: -0.9905276}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: buffDog_arms:QuickRigCharacter_RightFoot
+      parentName: buffDog_arms:QuickRigCharacter_RightLeg
+      position: {x: 0.0026020422, y: -0.000000008502931, z: 0.0000000012181778}
+      rotation: {x: -0.027344584, y: 0.04040272, z: -0.5700271, w: -0.8201762}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
+    - name: buffDog_arms:QuickRigCharacter_RightToeBase
+      parentName: buffDog_arms:QuickRigCharacter_RightFoot
+      position: {x: 0.001107479, y: 1.5423503e-11, z: -1.9675903e-10}
+      rotation: {x: 0.000025374811, y: -0.00000001117587, z: -0.0000002523884, w: 1}
+      scale: {x: 1.0000005, y: 0.99999976, z: 1.0000004}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
