@@ -17,7 +17,7 @@ public class SelectCharacter : MonoBehaviour
     public TextMeshProUGUI textSelectCharacters;
 
     [SerializeField]
-    float charactersScale = 2;
+    float charactersScale1, charactersScale2, charactersScale3, charactersScale4;
 
     [Header("Personajes a usar en el juego -> FBX tal cual")]
     public GameObject character1, character2, character3, character4;
@@ -29,8 +29,16 @@ public class SelectCharacter : MonoBehaviour
 
     bool allCharactersSelected = false;
 
+    AudioSource audioS;
+
+    [Header("Select Audio")]
+    [SerializeField]
+    AudioClip amogusC, thorC, gokuC, dogeC;
+
     public void OnStart()
     {
+        audioS = GetComponent<AudioSource>();
+
         PlayerManager.playerType1 = null;
         PlayerManager.playerType2 = null;
 
@@ -46,10 +54,10 @@ public class SelectCharacter : MonoBehaviour
         go4 = Instantiate(character4);
         go4.transform.parent = transform;
 
-        go1.transform.localScale = new Vector3(charactersScale, charactersScale, charactersScale);
-        go2.transform.localScale = new Vector3(charactersScale, charactersScale, charactersScale);
-        go3.transform.localScale = new Vector3(charactersScale, charactersScale, charactersScale);
-        go4.transform.localScale = new Vector3(charactersScale, charactersScale, charactersScale);
+        go1.transform.localScale = new Vector3(charactersScale1, charactersScale1, charactersScale1);
+        go2.transform.localScale = new Vector3(charactersScale2, charactersScale2, charactersScale2);
+        go3.transform.localScale = new Vector3(charactersScale3, charactersScale3, charactersScale3);
+        go4.transform.localScale = new Vector3(charactersScale4, charactersScale4, charactersScale4);
 
         start = false;
         startFinished = true;
@@ -76,10 +84,10 @@ public class SelectCharacter : MonoBehaviour
             Vector3 XSeparation = new Vector3(30, 0, 0);
             Vector3 YPos = new Vector3(0, -40, 0);
 
-            go1.transform.position = pos - 2 * XSeparation + YPos;
+            go1.transform.position = pos - 2.3f * XSeparation + YPos;
             go2.transform.position = pos - 0.6f * XSeparation + YPos;
             go3.transform.position = pos + 0.6f * XSeparation + YPos;
-            go4.transform.position = pos + 2 * XSeparation + YPos;
+            go4.transform.position = pos + 2.3f * XSeparation + YPos;
 
             go1.transform.Rotate(new Vector3(0, 0.4f, 0));
             go2.transform.Rotate(new Vector3(0, 0.4f, 0));
@@ -103,11 +111,14 @@ public class SelectCharacter : MonoBehaviour
         if(PlayerManager.playerType1 == null)
         {
             PlayerManager.playerType1 = character1;
+            audioS.clip = amogusC;
+            audioS.Play();
         }
         else
         {
             PlayerManager.playerType2 = character1;
-
+            audioS.clip = amogusC;
+            audioS.Play();
             allCharactersSelected = true;
         }
     }
@@ -117,11 +128,14 @@ public class SelectCharacter : MonoBehaviour
         if (PlayerManager.playerType1 == null)
         {
             PlayerManager.playerType1 = character2;
+            audioS.clip = thorC;
+            audioS.Play();
         }
         else
         {
             PlayerManager.playerType2 = character2;
-
+            audioS.clip = thorC;
+            audioS.Play();
             allCharactersSelected = true;
         }
     }
@@ -131,11 +145,14 @@ public class SelectCharacter : MonoBehaviour
         if (PlayerManager.playerType1 == null)
         {
             PlayerManager.playerType1 = character3;
+            audioS.clip = gokuC;
+            audioS.Play();
         }
         else
         {
             PlayerManager.playerType2 = character3;
-
+            audioS.clip = gokuC;
+            audioS.Play();
             allCharactersSelected = true;
         }
     }
@@ -145,11 +162,14 @@ public class SelectCharacter : MonoBehaviour
         if (PlayerManager.playerType1 == null)
         {
             PlayerManager.playerType1 = character4;
+            audioS.clip = dogeC;
+            audioS.Play();
         }
         else
         {
             PlayerManager.playerType2 = character4;
-
+            audioS.clip = dogeC;
+            audioS.Play();
             allCharactersSelected = true;
         }
     }

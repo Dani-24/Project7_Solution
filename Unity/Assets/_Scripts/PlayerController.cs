@@ -153,11 +153,25 @@ public class PlayerController : MonoBehaviour
 
             if (movementInput > 0)
             {
-                animator.SetBool("walking", true);
+                if (playerDir.x > 0)
+                {
+                  animator.SetBool("walking", true);
+                }
+                else
+                {
+                  animator.SetBool("walkingBack", true);
+                }
             }
             else if (movementInput < 0)
             {
+                if (playerDir.x > 0)
+                {
                 animator.SetBool("walkingBack", true);
+                }
+                else
+                {
+                animator.SetBool("walking", true);
+            }
             }
             else
             {

@@ -1319,7 +1319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerControllerPrefab: {fileID: 5965096709858464886, guid: eae3b5221a559344e9de518fdd2925b5, type: 3}
-  useTestingGameObjects: 1
+  useTestingGameObjects: 0
   playerType1Testing: {fileID: 1928845931633963122, guid: dd50d8336e0eca14b9b368afce64bef8, type: 3}
   playerType2Testing: {fileID: 3077289075871316142, guid: a7e581eae2aa54544badb3022fed3d86, type: 3}
   player1SpawnPos: -5
