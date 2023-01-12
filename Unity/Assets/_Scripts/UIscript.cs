@@ -7,6 +7,8 @@ using TMPro;
 
 public class UIscript : MonoBehaviour
 {
+    Canvas canvas;
+
     public TextMeshProUGUI textPlayer1, textPlayer2;
     public GameObject player1Image, player2Image;
     public Slider playerSlider1, playerSlider2;
@@ -15,6 +17,10 @@ public class UIscript : MonoBehaviour
 
     void Start()
     {
+        canvas = GetComponent<Canvas>();
+
+        canvas.planeDistance = 0.31f;
+
         textPlayer1.text = "Player 1: " + PlayerManager.playerType1.GetComponent<PrefabPropierties>().characterName;
         player1Image.GetComponent<Image>().sprite = PlayerManager.playerType1.GetComponent<PrefabPropierties>().characterPhoto;
 
