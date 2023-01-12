@@ -2265,11 +2265,11 @@ MonoBehaviour:
   canvas: {fileID: 1078697569}
   cameraGO: {fileID: 1459017266}
   textSelectCharacters: {fileID: 1959817950}
-  charactersScale: 5
-  character1: {fileID: 8734837917430058270, guid: 8b3bd81adb8e9f04aac23353cc4ba88c, type: 3}
-  character2: {fileID: 8734837917430058270, guid: 8b3bd81adb8e9f04aac23353cc4ba88c, type: 3}
-  character3: {fileID: 919132149155446097, guid: e19b77faf595a954e96fd297b76de6b1, type: 3}
-  character4: {fileID: 1947429404720718175, guid: ed983ff0198750b40bcbad2ca0bb52a3, type: 3}
+  charactersScale: 10
+  character1: {fileID: 4401036054878118866, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
+  character2: {fileID: 4401036054878118866, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
+  character3: {fileID: 4401036054878118866, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
+  character4: {fileID: 4401036054878118866, guid: 992df79419f90504dba7dc58d2ea1a47, type: 3}
   button1: {fileID: 1366838576}
   button2: {fileID: 1997096397}
   button3: {fileID: 564892919}
