@@ -1,1 +1,2 @@
-https://github.com/Dani-24/Project7_Solution/tree/main/Maya/** linguist-vendored
+*.nb linguist-detectable=false
+*.m linguist-detectable=false
