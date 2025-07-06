@@ -1,1 +1,5 @@
 Maya/* linguist-vendored
+
+*.ma -linguist-detectable
+*.mb -linguist-detectable
+*.mel -linguist-detectable
